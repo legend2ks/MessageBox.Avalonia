@@ -10,6 +10,8 @@ public partial class MsBoxWindow : Window
         InitializeComponent();
         ShowInTaskbar = false;
         CanResize = false;
+        if (!Design.IsDesignMode)
+            Win32.UseImmersiveDarkMode(TryGetPlatformHandle()!.Handle, true);
     }
 
     public async void CloseSafe()
