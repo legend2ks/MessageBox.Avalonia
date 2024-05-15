@@ -22,6 +22,8 @@
     </UserControl.Resources>
     <UserControl.KeyBindings>
         <KeyBinding Gesture="Ctrl+C" Command="{Binding Copy}" />
+        <KeyBinding Gesture="Enter" Command="{Binding EnterClickCommand}" />
+        <KeyBinding Gesture="Escape" Command="{Binding EscClickCommand}" />
     </UserControl.KeyBindings>
     <UserControl.Styles>
       <Style Selector="Image">
