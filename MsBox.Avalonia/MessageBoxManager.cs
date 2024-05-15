@@ -29,6 +29,17 @@ public static class MessageBoxManager
         return new MsBox<MsBoxStandardView, MsBoxStandardViewModel, ButtonResult>(msBoxStandardView,
             msBoxStandardViewModel);
     }
+    
+    public static IMsBox<MessageBoxCheckboxResult> GetMessageBoxCheckbox(MessageBoxCheckboxParams @params)
+    {
+        var msBoxCheckboxViewModel = new MsBoxCheckboxViewModel(@params);
+        var msBoxCheckboxView = new MsBoxCheckboxView
+        {
+            DataContext = msBoxCheckboxViewModel
+        };
+        return new MsBox<MsBoxCheckboxView, MsBoxCheckboxViewModel, MessageBoxCheckboxResult>(msBoxCheckboxView,
+            msBoxCheckboxViewModel);
+    }
 
     /// <summary>
     /// Create instance of standard messagebox window
